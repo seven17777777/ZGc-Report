@@ -669,8 +669,9 @@ public class IdleGCTest {
 | GC(3) Garbage Collection (Proactive)<br>         |  主动垃圾回收  |  由 ZGC 主动触发，以确保内存使用保持在合理范围内，避免内存不足的情况  |
 | GC(4) Garbage Collection (Allocation Rate) <br>  |  分配率垃圾回收  |  当对象分配速率过高时触发，以防止内存快速耗尽  |
 | GC(10) Garbage Collection (Allocation Stall)<br> |  分配停滞垃圾回收  |  当内存分配出现停滞（例如没有足够的空闲内存页面）时触发，以确保内存分配能够继续进行  |
-
-
+|GC(46) Garbage Collection (System.gc())|手动垃圾回收|由调用 System.gc() 方法触发，通常用于手动请求垃圾回收|
+|GC(47) Garbage Collection (Timer)|定时垃圾回收|由定时器触发的垃圾回收，用于定期清理内存|
+	
 
 
 # 5、调优 //todo
