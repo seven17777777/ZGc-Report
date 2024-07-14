@@ -464,7 +464,7 @@ public class ZGCExample {
 | 回收内存 | -           | -           | 0M (0%)        | 3M (0%)      | -           | -           |
 </details>
 
-## 3、其他触发条件得到的日志（修改了程序） //todo
+## 3、其他触发条件得到的日志（修改了程序） 
 
 <details>
     <summary>修改后的程序</summary>
