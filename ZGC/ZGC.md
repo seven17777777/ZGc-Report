@@ -674,7 +674,7 @@ public class IdleGCTest {
 	
 
 
-# 5、调优 //todo
+# 5、调优 
 ## 1、修改程序的ConcGCThreads
 参数为
 ```
