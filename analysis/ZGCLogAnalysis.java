@@ -1,8 +1,8 @@
 package com.code.tryOne.jvmGc.analysis;
 
+import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,8 +45,8 @@ public class ZGCLogAnalysis {
         double throughput = 100 * (1 - totalPauseTime / lastTime / 1000);
 
         String fileName = new File(filePath).getName();
-        System.out.printf("文件名称：%30s | GC事件数量: %5d | 平均暂停时间: %.6fms | 最大暂停时间: %.3fms | 吞吐量: %.2f%% | 总暂停时间: %.3fms%n",
-                fileName, gcCount, avgPauseTime, maxPauseTime, throughput, totalPauseTime);
+        System.out.printf("文件名称：%25s |文件运行总时间：%.3fms| GC事件数量: %5d | 平均暂停时间: %.6fms | 最大暂停时间: %.3fms | 吞吐量: %.2f%% | 总暂停时间: %.3fms%n",
+                fileName, lastTime, gcCount, avgPauseTime, maxPauseTime, throughput, totalPauseTime);
 
     }
 
