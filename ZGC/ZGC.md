@@ -719,11 +719,22 @@ public class Zgc {
 
 
 </details>
+程序的介绍：程序分配10000M内存，并使用。中间打印各种数据。
 
+## 1、对程序的Xmx（最大堆内存）参数进行调优
+参数为
+```
+-XX:+UseZGC
+-Xlog:gc*:file=./gc.log:time,uptime
+```
+增加调整参数及其对应log文件
 
-## 1、对程序的
-
-
+- [Xmx128m](Xmx/1Xmx128m.log)
+- [Xmx256m](Xmx/2Xmx256m.log)
+- [Xmx512m](Xmx/3Xmx512m.log)
+- [Xmx1g](Xmx/4Xmx1g.log)
+- [Xmx2g](Xmx/5Xmx2g.log)
+- [Xmx4g](Xmx/6Xmx4g.log)
 
 ## 1、修改程序的ConcGCThreads
 参数为

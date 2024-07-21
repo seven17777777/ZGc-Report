@@ -1,0 +1,369 @@
+[2024-07-21T19:51:01.632+0800][0.014s][gc,init] Initializing The Z Garbage Collector
+[2024-07-21T19:51:01.632+0800][0.014s][gc,init] Version: 17.0.2+8-86 (release)
+[2024-07-21T19:51:01.632+0800][0.014s][gc,init] NUMA Support: Disabled
+[2024-07-21T19:51:01.632+0800][0.014s][gc,init] CPUs: 8 total, 8 available
+[2024-07-21T19:51:01.632+0800][0.014s][gc,init] Memory: 16281M
+[2024-07-21T19:51:01.632+0800][0.014s][gc,init] Large Page Support: Disabled
+[2024-07-21T19:51:01.633+0800][0.014s][gc,init] GC Workers: 2 (dynamic)
+[2024-07-21T19:51:01.633+0800][0.015s][gc,init] Address Space Type: Contiguous/Unrestricted/Complete
+[2024-07-21T19:51:01.633+0800][0.015s][gc,init] Address Space Size: 32768M x 3 = 98304M
+[2024-07-21T19:51:01.633+0800][0.015s][gc,init] Min Capacity: 8M
+[2024-07-21T19:51:01.634+0800][0.016s][gc,init] Initial Capacity: 256M
+[2024-07-21T19:51:01.634+0800][0.016s][gc,init] Max Capacity: 2048M
+[2024-07-21T19:51:01.634+0800][0.016s][gc,init] Medium Page Size: 32M
+[2024-07-21T19:51:01.634+0800][0.016s][gc,init] Pre-touch: Disabled
+[2024-07-21T19:51:01.634+0800][0.016s][gc,init] Uncommit: Enabled
+[2024-07-21T19:51:01.634+0800][0.016s][gc,init] Uncommit Delay: 300s
+[2024-07-21T19:51:01.648+0800][0.030s][gc,init] Runtime Workers: 5
+[2024-07-21T19:51:01.649+0800][0.030s][gc     ] Using The Z Garbage Collector
+[2024-07-21T19:51:01.649+0800][0.031s][gc,metaspace] CDS archive(s) mapped at: [0x0000000800000000-0x0000000800bc0000-0x0000000800bc0000), size 12320768, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+[2024-07-21T19:51:01.649+0800][0.031s][gc,metaspace] Compressed class space mapped at: 0x0000000800c00000-0x0000000840c00000, reserved size: 1073741824
+[2024-07-21T19:51:01.649+0800][0.031s][gc,metaspace] Narrow klass base: 0x0000000800000000, Narrow klass shift: 0, Narrow klass range: 0x100000000
+[2024-07-21T19:51:02.381+0800][0.762s][gc,start    ] GC(0) Garbage Collection (Warmup)
+[2024-07-21T19:51:02.381+0800][0.763s][gc,task     ] GC(0) Using 2 workers
+[2024-07-21T19:51:02.381+0800][0.763s][gc,phases   ] GC(0) Pause Mark Start 0.033ms
+[2024-07-21T19:51:02.397+0800][0.778s][gc,phases   ] GC(0) Concurrent Mark 15.355ms
+[2024-07-21T19:51:02.413+0800][0.795s][gc,phases   ] GC(0) Pause Mark End 0.028ms
+[2024-07-21T19:51:02.413+0800][0.795s][gc,phases   ] GC(0) Concurrent Mark Free 0.001ms
+[2024-07-21T19:51:02.413+0800][0.795s][gc,phases   ] GC(0) Concurrent Process Non-Strong References 0.515ms
+[2024-07-21T19:51:02.413+0800][0.795s][gc,phases   ] GC(0) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:02.426+0800][0.808s][gc,phases   ] GC(0) Concurrent Select Relocation Set 12.301ms
+[2024-07-21T19:51:02.426+0800][0.808s][gc,phases   ] GC(0) Pause Relocate Start 0.012ms
+[2024-07-21T19:51:02.430+0800][0.812s][gc,phases   ] GC(0) Concurrent Relocate 4.224ms
+[2024-07-21T19:51:02.430+0800][0.812s][gc,load     ] GC(0) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:02.430+0800][0.812s][gc,mmu      ] GC(0) MMU: 2ms/98.4%, 5ms/99.3%, 10ms/99.7%, 20ms/99.8%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:02.430+0800][0.812s][gc,marking  ] GC(0) Mark: 2 stripe(s), 1 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:02.430+0800][0.812s][gc,marking  ] GC(0) Mark Stack Usage: 32M
+[2024-07-21T19:51:02.430+0800][0.812s][gc,nmethod  ] GC(0) NMethods: 320 registered, 0 unregistered
+[2024-07-21T19:51:02.431+0800][0.812s][gc,metaspace] GC(0) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:02.431+0800][0.812s][gc,ref      ] GC(0) Soft: 53 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:02.431+0800][0.812s][gc,ref      ] GC(0) Weak: 153 encountered, 56 discovered, 36 enqueued
+[2024-07-21T19:51:02.431+0800][0.812s][gc,ref      ] GC(0) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:02.431+0800][0.812s][gc,ref      ] GC(0) Phantom: 217 encountered, 158 discovered, 33 enqueued
+[2024-07-21T19:51:02.431+0800][0.812s][gc,reloc    ] GC(0) Small Pages: 5 / 10M, Empty: 0M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:02.431+0800][0.812s][gc,reloc    ] GC(0) Medium Pages: 7 / 224M, Empty: 160M, Relocated: 10M, In-Place: 0
+[2024-07-21T19:51:02.431+0800][0.813s][gc,reloc    ] GC(0) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:02.431+0800][0.813s][gc,reloc    ] GC(0) Forwarding Usage: 0M
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0) Min Capacity: 8M(0%)
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0)  Capacity:      256M (12%)         288M (14%)         288M (14%)         288M (14%)         288M (14%)         256M (12%)    
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0)      Free:     1814M (89%)        1782M (87%)        1940M (95%)        1976M (96%)        1976M (96%)        1780M (87%)    
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0)      Used:      234M (11%)         266M (13%)         108M (5%)           72M (4%)          268M (13%)          72M (4%)     
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0)      Live:         -                14M (1%)           14M (1%)           14M (1%)             -                  -          
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0) Allocated:         -                32M (2%)           34M (2%)           34M (2%)             -                  -          
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0)   Garbage:         -               219M (11%)          59M (3%)           23M (1%)             -                  -          
+[2024-07-21T19:51:02.431+0800][0.813s][gc,heap     ] GC(0) Reclaimed:         -                  -               160M (8%)          196M (10%)            -                  -          
+[2024-07-21T19:51:02.431+0800][0.813s][gc          ] GC(0) Garbage Collection (Warmup) 234M(11%)->72M(4%)
+[2024-07-21T19:51:03.282+0800][1.664s][gc,start    ] GC(1) Garbage Collection (Warmup)
+[2024-07-21T19:51:03.282+0800][1.664s][gc,task     ] GC(1) Using 2 workers
+[2024-07-21T19:51:03.282+0800][1.664s][gc,phases   ] GC(1) Pause Mark Start 0.007ms
+[2024-07-21T19:51:03.298+0800][1.680s][gc,phases   ] GC(1) Concurrent Mark 15.645ms
+[2024-07-21T19:51:03.314+0800][1.696s][gc,phases   ] GC(1) Pause Mark End 0.024ms
+[2024-07-21T19:51:03.314+0800][1.696s][gc,phases   ] GC(1) Concurrent Mark Free 0.002ms
+[2024-07-21T19:51:03.315+0800][1.697s][gc,phases   ] GC(1) Concurrent Process Non-Strong References 0.879ms
+[2024-07-21T19:51:03.315+0800][1.697s][gc,phases   ] GC(1) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:03.317+0800][1.699s][gc,phases   ] GC(1) Concurrent Select Relocation Set 1.853ms
+[2024-07-21T19:51:03.317+0800][1.699s][gc,phases   ] GC(1) Pause Relocate Start 0.006ms
+[2024-07-21T19:51:03.322+0800][1.704s][gc,phases   ] GC(1) Concurrent Relocate 4.974ms
+[2024-07-21T19:51:03.323+0800][1.704s][gc,load     ] GC(1) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:03.323+0800][1.704s][gc,mmu      ] GC(1) MMU: 2ms/98.4%, 5ms/99.3%, 10ms/99.7%, 20ms/99.8%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:03.323+0800][1.704s][gc,marking  ] GC(1) Mark: 2 stripe(s), 1 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:03.323+0800][1.704s][gc,marking  ] GC(1) Mark Stack Usage: 32M
+[2024-07-21T19:51:03.323+0800][1.704s][gc,nmethod  ] GC(1) NMethods: 371 registered, 0 unregistered
+[2024-07-21T19:51:03.323+0800][1.704s][gc,metaspace] GC(1) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:03.323+0800][1.704s][gc,ref      ] GC(1) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:03.323+0800][1.704s][gc,ref      ] GC(1) Weak: 136 encountered, 6 discovered, 5 enqueued
+[2024-07-21T19:51:03.323+0800][1.704s][gc,ref      ] GC(1) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:03.323+0800][1.704s][gc,ref      ] GC(1) Phantom: 189 encountered, 148 discovered, 5 enqueued
+[2024-07-21T19:51:03.323+0800][1.705s][gc,reloc    ] GC(1) Small Pages: 6 / 12M, Empty: 0M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:03.323+0800][1.705s][gc,reloc    ] GC(1) Medium Pages: 14 / 448M, Empty: 352M, Relocated: 10M, In-Place: 0
+[2024-07-21T19:51:03.323+0800][1.705s][gc,reloc    ] GC(1) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:03.323+0800][1.705s][gc,reloc    ] GC(1) Forwarding Usage: 0M
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1) Min Capacity: 8M(0%)
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1)  Capacity:      480M (23%)         512M (25%)         512M (25%)         512M (25%)         512M (25%)         480M (23%)    
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1)      Free:     1588M (78%)        1556M (76%)        1908M (93%)        1976M (96%)        1976M (96%)        1556M (76%)    
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1)      Used:      460M (22%)         492M (24%)         140M (7%)           72M (4%)          492M (24%)          72M (4%)     
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1)      Live:         -                14M (1%)           14M (1%)           14M (1%)             -                  -          
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1) Allocated:         -                32M (2%)           32M (2%)           33M (2%)             -                  -          
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1)   Garbage:         -               445M (22%)          93M (5%)           23M (1%)             -                  -          
+[2024-07-21T19:51:03.323+0800][1.705s][gc,heap     ] GC(1) Reclaimed:         -                  -               352M (17%)         421M (21%)            -                  -          
+[2024-07-21T19:51:03.323+0800][1.705s][gc          ] GC(1) Garbage Collection (Warmup) 460M(22%)->72M(4%)
+[2024-07-21T19:51:04.289+0800][2.671s][gc,start    ] GC(2) Garbage Collection (Warmup)
+[2024-07-21T19:51:04.289+0800][2.671s][gc,task     ] GC(2) Using 2 workers
+[2024-07-21T19:51:04.289+0800][2.671s][gc,phases   ] GC(2) Pause Mark Start 0.007ms
+[2024-07-21T19:51:04.305+0800][2.687s][gc,phases   ] GC(2) Concurrent Mark 15.487ms
+[2024-07-21T19:51:04.305+0800][2.687s][gc,phases   ] GC(2) Pause Mark End 0.011ms
+[2024-07-21T19:51:04.305+0800][2.687s][gc,phases   ] GC(2) Concurrent Mark Free 0.005ms
+[2024-07-21T19:51:04.306+0800][2.688s][gc,phases   ] GC(2) Concurrent Process Non-Strong References 0.985ms
+[2024-07-21T19:51:04.307+0800][2.688s][gc,phases   ] GC(2) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:04.308+0800][2.690s][gc,phases   ] GC(2) Concurrent Select Relocation Set 1.643ms
+[2024-07-21T19:51:04.308+0800][2.690s][gc,phases   ] GC(2) Pause Relocate Start 0.006ms
+[2024-07-21T19:51:04.310+0800][2.691s][gc,phases   ] GC(2) Concurrent Relocate 1.040ms
+[2024-07-21T19:51:04.310+0800][2.691s][gc,load     ] GC(2) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:04.310+0800][2.691s][gc,mmu      ] GC(2) MMU: 2ms/98.4%, 5ms/99.3%, 10ms/99.7%, 20ms/99.8%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:04.310+0800][2.691s][gc,marking  ] GC(2) Mark: 2 stripe(s), 2 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:04.310+0800][2.691s][gc,marking  ] GC(2) Mark Stack Usage: 32M
+[2024-07-21T19:51:04.310+0800][2.691s][gc,nmethod  ] GC(2) NMethods: 378 registered, 0 unregistered
+[2024-07-21T19:51:04.310+0800][2.691s][gc,metaspace] GC(2) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:04.310+0800][2.691s][gc,ref      ] GC(2) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:04.310+0800][2.691s][gc,ref      ] GC(2) Weak: 131 encountered, 77 discovered, 0 enqueued
+[2024-07-21T19:51:04.310+0800][2.691s][gc,ref      ] GC(2) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:04.310+0800][2.691s][gc,ref      ] GC(2) Phantom: 184 encountered, 134 discovered, 0 enqueued
+[2024-07-21T19:51:04.310+0800][2.691s][gc,reloc    ] GC(2) Small Pages: 4 / 8M, Empty: 0M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:04.310+0800][2.691s][gc,reloc    ] GC(2) Medium Pages: 19 / 608M, Empty: 544M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:04.310+0800][2.691s][gc,reloc    ] GC(2) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:04.310+0800][2.691s][gc,reloc    ] GC(2) Forwarding Usage: 0M
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2) Min Capacity: 8M(0%)
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2)  Capacity:      640M (31%)         672M (33%)         672M (33%)         672M (33%)         672M (33%)         640M (31%)    
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2)      Free:     1432M (70%)        1398M (68%)        1942M (95%)        1976M (96%)        1976M (96%)        1398M (68%)    
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2)      Used:      616M (30%)         650M (32%)         106M (5%)           72M (4%)          650M (32%)          72M (4%)     
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2)      Live:         -                 5M (0%)            5M (0%)            5M (0%)             -                  -          
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2) Allocated:         -                34M (2%)           34M (2%)           34M (2%)             -                  -          
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2)   Garbage:         -               610M (30%)          66M (3%)           32M (2%)             -                  -          
+[2024-07-21T19:51:04.310+0800][2.691s][gc,heap     ] GC(2) Reclaimed:         -                  -               544M (27%)         578M (28%)            -                  -          
+[2024-07-21T19:51:04.310+0800][2.692s][gc          ] GC(2) Garbage Collection (Warmup) 616M(30%)->72M(4%)
+[2024-07-21T19:51:07.489+0800][5.871s][gc,start    ] GC(3) Garbage Collection (Proactive)
+[2024-07-21T19:51:07.489+0800][5.871s][gc,task     ] GC(3) Using 2 workers
+[2024-07-21T19:51:07.489+0800][5.871s][gc,phases   ] GC(3) Pause Mark Start 0.007ms
+[2024-07-21T19:51:07.505+0800][5.887s][gc,phases   ] GC(3) Concurrent Mark 15.529ms
+[2024-07-21T19:51:07.521+0800][5.902s][gc,phases   ] GC(3) Pause Mark End 0.031ms
+[2024-07-21T19:51:07.521+0800][5.902s][gc,phases   ] GC(3) Concurrent Mark Free 0.001ms
+[2024-07-21T19:51:07.522+0800][5.903s][gc,phases   ] GC(3) Concurrent Process Non-Strong References 0.807ms
+[2024-07-21T19:51:07.522+0800][5.903s][gc,phases   ] GC(3) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:07.524+0800][5.906s][gc,phases   ] GC(3) Concurrent Select Relocation Set 2.475ms
+[2024-07-21T19:51:07.524+0800][5.906s][gc,phases   ] GC(3) Pause Relocate Start 0.008ms
+[2024-07-21T19:51:07.526+0800][5.908s][gc,phases   ] GC(3) Concurrent Relocate 1.607ms
+[2024-07-21T19:51:07.526+0800][5.908s][gc,load     ] GC(3) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:07.526+0800][5.908s][gc,mmu      ] GC(3) MMU: 2ms/98.4%, 5ms/99.2%, 10ms/99.6%, 20ms/99.8%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:07.526+0800][5.908s][gc,marking  ] GC(3) Mark: 2 stripe(s), 1 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:07.526+0800][5.908s][gc,marking  ] GC(3) Mark Stack Usage: 32M
+[2024-07-21T19:51:07.526+0800][5.908s][gc,nmethod  ] GC(3) NMethods: 425 registered, 0 unregistered
+[2024-07-21T19:51:07.526+0800][5.908s][gc,metaspace] GC(3) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:07.526+0800][5.908s][gc,ref      ] GC(3) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:07.526+0800][5.908s][gc,ref      ] GC(3) Weak: 131 encountered, 83 discovered, 0 enqueued
+[2024-07-21T19:51:07.526+0800][5.908s][gc,ref      ] GC(3) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:07.526+0800][5.908s][gc,ref      ] GC(3) Phantom: 184 encountered, 106 discovered, 0 enqueued
+[2024-07-21T19:51:07.526+0800][5.908s][gc,reloc    ] GC(3) Small Pages: 5 / 10M, Empty: 0M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:07.527+0800][5.908s][gc,reloc    ] GC(3) Medium Pages: 49 / 1568M, Empty: 1536M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:07.527+0800][5.908s][gc,reloc    ] GC(3) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:07.527+0800][5.908s][gc,reloc    ] GC(3) Forwarding Usage: 0M
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3) Min Capacity: 8M(0%)
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3)  Capacity:     1600M (78%)        1632M (80%)        1632M (80%)        1632M (80%)        1632M (80%)        1600M (78%)    
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3)      Free:      470M (23%)         438M (21%)        1974M (96%)        1974M (96%)        1974M (96%)         438M (21%)    
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3)      Used:     1578M (77%)        1610M (79%)          74M (4%)           74M (4%)         1610M (79%)          74M (4%)     
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3)      Live:         -                 4M (0%)            4M (0%)            4M (0%)             -                  -          
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3) Allocated:         -                32M (2%)           32M (2%)           33M (2%)             -                  -          
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3)   Garbage:         -              1573M (77%)          37M (2%)           35M (2%)             -                  -          
+[2024-07-21T19:51:07.527+0800][5.908s][gc,heap     ] GC(3) Reclaimed:         -                  -              1536M (75%)        1537M (75%)            -                  -          
+[2024-07-21T19:51:07.527+0800][5.908s][gc          ] GC(3) Garbage Collection (Proactive) 1578M(77%)->74M(4%)
+[2024-07-21T19:51:10.490+0800][8.872s][gc,start    ] GC(4) Garbage Collection (Proactive)
+[2024-07-21T19:51:10.490+0800][8.872s][gc,task     ] GC(4) Using 2 workers
+[2024-07-21T19:51:10.490+0800][8.872s][gc,phases   ] GC(4) Pause Mark Start 0.010ms
+[2024-07-21T19:51:10.507+0800][8.888s][gc,phases   ] GC(4) Concurrent Mark 15.688ms
+[2024-07-21T19:51:10.521+0800][8.903s][gc,phases   ] GC(4) Pause Mark End 0.030ms
+[2024-07-21T19:51:10.521+0800][8.903s][gc,phases   ] GC(4) Concurrent Mark Free 0.001ms
+[2024-07-21T19:51:10.522+0800][8.904s][gc,phases   ] GC(4) Concurrent Process Non-Strong References 1.044ms
+[2024-07-21T19:51:10.522+0800][8.904s][gc,phases   ] GC(4) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:10.527+0800][8.909s][gc,phases   ] GC(4) Concurrent Select Relocation Set 5.052ms
+[2024-07-21T19:51:10.527+0800][8.910s][gc,phases   ] GC(4) Pause Relocate Start 0.008ms
+[2024-07-21T19:51:10.529+0800][8.911s][gc,phases   ] GC(4) Concurrent Relocate 1.353ms
+[2024-07-21T19:51:10.529+0800][8.911s][gc,load     ] GC(4) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:10.529+0800][8.911s][gc,mmu      ] GC(4) MMU: 2ms/98.4%, 5ms/99.2%, 10ms/99.6%, 20ms/99.8%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:10.529+0800][8.911s][gc,marking  ] GC(4) Mark: 2 stripe(s), 1 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:10.529+0800][8.911s][gc,marking  ] GC(4) Mark Stack Usage: 32M
+[2024-07-21T19:51:10.529+0800][8.911s][gc,nmethod  ] GC(4) NMethods: 438 registered, 0 unregistered
+[2024-07-21T19:51:10.529+0800][8.911s][gc,metaspace] GC(4) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:10.529+0800][8.911s][gc,ref      ] GC(4) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:10.529+0800][8.911s][gc,ref      ] GC(4) Weak: 131 encountered, 77 discovered, 0 enqueued
+[2024-07-21T19:51:10.529+0800][8.911s][gc,ref      ] GC(4) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:10.529+0800][8.911s][gc,ref      ] GC(4) Phantom: 184 encountered, 170 discovered, 0 enqueued
+[2024-07-21T19:51:10.529+0800][8.911s][gc,reloc    ] GC(4) Small Pages: 5 / 10M, Empty: 2M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:10.529+0800][8.911s][gc,reloc    ] GC(4) Medium Pages: 56 / 1792M, Empty: 1760M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:10.529+0800][8.911s][gc,reloc    ] GC(4) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:10.529+0800][8.911s][gc,reloc    ] GC(4) Forwarding Usage: 0M
+[2024-07-21T19:51:10.529+0800][8.911s][gc,heap     ] GC(4) Min Capacity: 8M(0%)
+[2024-07-21T19:51:10.529+0800][8.912s][gc,heap     ] GC(4) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:10.529+0800][8.912s][gc,heap     ] GC(4) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:10.529+0800][8.912s][gc,heap     ] GC(4)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:10.529+0800][8.912s][gc,heap     ] GC(4)  Capacity:     1824M (89%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1824M (89%)    
+[2024-07-21T19:51:10.529+0800][8.912s][gc,heap     ] GC(4)      Free:      246M (12%)         214M (10%)        1976M (96%)        1974M (96%)        1976M (96%)         214M (10%)    
+[2024-07-21T19:51:10.530+0800][8.912s][gc,heap     ] GC(4)      Used:     1802M (88%)        1834M (90%)          72M (4%)           74M (4%)         1834M (90%)          72M (4%)     
+[2024-07-21T19:51:10.530+0800][8.912s][gc,heap     ] GC(4)      Live:         -                 4M (0%)            4M (0%)            4M (0%)             -                  -          
+[2024-07-21T19:51:10.530+0800][8.912s][gc,heap     ] GC(4) Allocated:         -                32M (2%)           32M (2%)           33M (2%)             -                  -          
+[2024-07-21T19:51:10.530+0800][8.912s][gc,heap     ] GC(4)   Garbage:         -              1797M (88%)          35M (2%)           35M (2%)             -                  -          
+[2024-07-21T19:51:10.530+0800][8.912s][gc,heap     ] GC(4) Reclaimed:         -                  -              1762M (86%)        1761M (86%)            -                  -          
+[2024-07-21T19:51:10.530+0800][8.912s][gc          ] GC(4) Garbage Collection (Proactive) 1802M(88%)->74M(4%)
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ] === Garbage Collection Statistics =======================================================================================================================
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]                                                              Last 10s              Last 10m              Last 10h                Total
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]                                                              Avg / Max             Avg / Max             Avg / Max             Avg / Max
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]   Collector: Garbage Collection Cycle                     37.443 / 49.785       37.443 / 49.785       37.443 / 49.785       37.443 / 49.785      ms
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]  Contention: Mark Segment Reset Contention                     0 / 1                 0 / 1                 0 / 1                 0 / 1           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]  Contention: Mark SeqNum Reset Contention                      0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]    Critical: Allocation Stall                                  0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]    Critical: Allocation Stall                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]    Critical: GC Locker Stall                                   0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]    Critical: GC Locker Stall                               0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]    Critical: Relocation Stall                                  0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]    Critical: Relocation Stall                              0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Allocation Rate                                 527 / 672             527 / 672             527 / 672             527 / 672         MB/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Out Of Memory                                     0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Page Cache Flush                                  0 / 0                 0 / 0                 0 / 0                 0 / 0           MB/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Page Cache Hit L1                                12 / 21               12 / 21               12 / 21               12 / 21          ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Page Cache Hit L2                                 0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Page Cache Hit L3                                 1 / 14                1 / 14                1 / 14                1 / 14          ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Page Cache Miss                                   5 / 13                5 / 13                5 / 13                5 / 13          ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Uncommit                                          0 / 0                 0 / 0                 0 / 0                 0 / 0           MB/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Undo Object Allocation Failed                     0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.676+0800][10.058s][gc,stats    ]      Memory: Undo Object Allocation Succeeded                  0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.677+0800][10.058s][gc,stats    ]      Memory: Undo Page Allocation                              0 / 0                 0 / 0                 0 / 0                 0 / 0           ops/s
+[2024-07-21T19:51:11.677+0800][10.058s][gc,stats    ]       Phase: Concurrent Mark                              15.541 / 15.688       15.541 / 15.688       15.541 / 15.688       15.541 / 15.688      ms
+[2024-07-21T19:51:11.677+0800][10.058s][gc,stats    ]       Phase: Concurrent Mark Continue                      0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[2024-07-21T19:51:11.677+0800][10.058s][gc,stats    ]       Phase: Concurrent Mark Free                          0.002 / 0.005         0.002 / 0.005         0.002 / 0.005         0.002 / 0.005       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Concurrent Process Non-Strong References      0.846 / 1.044         0.846 / 1.044         0.846 / 1.044         0.846 / 1.044       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Concurrent Relocate                           2.640 / 4.974         2.640 / 4.974         2.640 / 4.974         2.640 / 4.974       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Concurrent Reset Relocation Set               0.001 / 0.001         0.001 / 0.001         0.001 / 0.001         0.001 / 0.001       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Concurrent Select Relocation Set              4.665 / 12.301        4.665 / 12.301        4.665 / 12.301        4.665 / 12.301      ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Pause Mark End                                0.025 / 0.031         0.025 / 0.031         0.025 / 0.031         0.025 / 0.031       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Pause Mark Start                              0.013 / 0.033         0.013 / 0.033         0.013 / 0.033         0.013 / 0.033       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]       Phase: Pause Relocate Start                          0.008 / 0.012         0.008 / 0.012         0.008 / 0.012         0.008 / 0.012       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Classes Purge                      0.093 / 0.116         0.093 / 0.116         0.093 / 0.116         0.093 / 0.116       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Classes Unlink                     0.312 / 0.439         0.312 / 0.439         0.312 / 0.439         0.312 / 0.439       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Mark                               8.909 / 15.062        8.909 / 15.062        8.909 / 15.062        8.909 / 15.062      ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Mark Try Flush                     0.107 / 0.154         0.107 / 0.154         0.107 / 0.154         0.107 / 0.154       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Mark Try Terminate                 4.158 / 13.024        4.158 / 13.024        4.158 / 13.024        4.158 / 13.024      ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent References Enqueue                 0.002 / 0.007         0.002 / 0.007         0.002 / 0.007         0.002 / 0.007       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent References Process                 0.107 / 0.150         0.107 / 0.150         0.107 / 0.150         0.107 / 0.150       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Roots ClassLoaderDataGraph         0.071 / 0.211         0.071 / 0.211         0.071 / 0.211         0.071 / 0.211       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Roots CodeCache                    0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Roots JavaThreads                  0.208 / 0.443         0.208 / 0.443         0.208 / 0.443         0.208 / 0.443       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Roots OopStorageSet                0.022 / 0.042         0.022 / 0.042         0.022 / 0.042         0.022 / 0.042       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Concurrent Weak Roots OopStorageSet           0.153 / 0.216         0.153 / 0.216         0.153 / 0.216         0.153 / 0.216       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]    Subphase: Pause Mark Try Complete                       0.000 / 0.000         0.000 / 0.000         0.000 / 0.000         0.000 / 0.000       ms
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ]      System: Java Threads                                     13 / 13               13 / 13               13 / 13               13 / 13          threads
+[2024-07-21T19:51:11.677+0800][10.059s][gc,stats    ] =========================================================================================================================================================
+[2024-07-21T19:51:13.180+0800][11.561s][gc,start    ] GC(5) Garbage Collection (Proactive)
+[2024-07-21T19:51:13.180+0800][11.561s][gc,task     ] GC(5) Using 2 workers
+[2024-07-21T19:51:13.180+0800][11.562s][gc,phases   ] GC(5) Pause Mark Start 0.011ms
+[2024-07-21T19:51:13.194+0800][11.576s][gc,phases   ] GC(5) Concurrent Mark 13.997ms
+[2024-07-21T19:51:13.194+0800][11.576s][gc,phases   ] GC(5) Pause Mark End 0.028ms
+[2024-07-21T19:51:13.194+0800][11.576s][gc,phases   ] GC(5) Concurrent Mark Free 0.001ms
+[2024-07-21T19:51:13.195+0800][11.577s][gc,phases   ] GC(5) Concurrent Process Non-Strong References 1.043ms
+[2024-07-21T19:51:13.195+0800][11.577s][gc,phases   ] GC(5) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:13.198+0800][11.580s][gc,phases   ] GC(5) Concurrent Select Relocation Set 3.102ms
+[2024-07-21T19:51:13.198+0800][11.581s][gc,phases   ] GC(5) Pause Relocate Start 0.019ms
+[2024-07-21T19:51:13.201+0800][11.583s][gc,phases   ] GC(5) Concurrent Relocate 2.156ms
+[2024-07-21T19:51:13.201+0800][11.583s][gc,load     ] GC(5) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:13.201+0800][11.583s][gc,mmu      ] GC(5) MMU: 2ms/98.4%, 5ms/99.1%, 10ms/99.5%, 20ms/99.7%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:13.201+0800][11.583s][gc,marking  ] GC(5) Mark: 2 stripe(s), 2 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:13.201+0800][11.583s][gc,marking  ] GC(5) Mark Stack Usage: 32M
+[2024-07-21T19:51:13.201+0800][11.583s][gc,nmethod  ] GC(5) NMethods: 450 registered, 0 unregistered
+[2024-07-21T19:51:13.201+0800][11.583s][gc,metaspace] GC(5) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:13.201+0800][11.583s][gc,ref      ] GC(5) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:13.201+0800][11.583s][gc,ref      ] GC(5) Weak: 131 encountered, 2 discovered, 0 enqueued
+[2024-07-21T19:51:13.201+0800][11.583s][gc,ref      ] GC(5) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:13.201+0800][11.583s][gc,ref      ] GC(5) Phantom: 184 encountered, 171 discovered, 0 enqueued
+[2024-07-21T19:51:13.201+0800][11.583s][gc,reloc    ] GC(5) Small Pages: 5 / 10M, Empty: 2M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:13.201+0800][11.583s][gc,reloc    ] GC(5) Medium Pages: 55 / 1760M, Empty: 1664M, Relocated: 4M, In-Place: 0
+[2024-07-21T19:51:13.201+0800][11.583s][gc,reloc    ] GC(5) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:13.201+0800][11.583s][gc,reloc    ] GC(5) Forwarding Usage: 0M
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5) Min Capacity: 8M(0%)
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5)  Capacity:     1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)    
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5)      Free:      278M (14%)         244M (12%)        1910M (93%)        1976M (96%)        1976M (96%)         244M (12%)    
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5)      Used:     1770M (86%)        1804M (88%)         138M (7%)           72M (4%)         1804M (88%)          72M (4%)     
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5)      Live:         -                 8M (0%)            8M (0%)            8M (0%)             -                  -          
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5) Allocated:         -                34M (2%)           34M (2%)           33M (2%)             -                  -          
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5)   Garbage:         -              1761M (86%)          95M (5%)           29M (1%)             -                  -          
+[2024-07-21T19:51:13.201+0800][11.583s][gc,heap     ] GC(5) Reclaimed:         -                  -              1666M (81%)        1731M (85%)            -                  -          
+[2024-07-21T19:51:13.201+0800][11.583s][gc          ] GC(5) Garbage Collection (Proactive) 1770M(86%)->72M(4%)
+[2024-07-21T19:51:15.780+0800][14.162s][gc,start    ] GC(6) Garbage Collection (Proactive)
+[2024-07-21T19:51:15.780+0800][14.162s][gc,task     ] GC(6) Using 2 workers
+[2024-07-21T19:51:15.780+0800][14.162s][gc,phases   ] GC(6) Pause Mark Start 0.008ms
+[2024-07-21T19:51:15.796+0800][14.178s][gc,phases   ] GC(6) Concurrent Mark 15.326ms
+[2024-07-21T19:51:15.796+0800][14.178s][gc,phases   ] GC(6) Pause Mark End 0.013ms
+[2024-07-21T19:51:15.796+0800][14.178s][gc,phases   ] GC(6) Concurrent Mark Free 0.002ms
+[2024-07-21T19:51:15.797+0800][14.179s][gc,phases   ] GC(6) Concurrent Process Non-Strong References 0.923ms
+[2024-07-21T19:51:15.797+0800][14.179s][gc,phases   ] GC(6) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:15.799+0800][14.181s][gc,phases   ] GC(6) Concurrent Select Relocation Set 1.742ms
+[2024-07-21T19:51:15.799+0800][14.181s][gc,phases   ] GC(6) Pause Relocate Start 0.006ms
+[2024-07-21T19:51:15.803+0800][14.185s][gc,phases   ] GC(6) Concurrent Relocate 3.244ms
+[2024-07-21T19:51:15.803+0800][14.185s][gc,load     ] GC(6) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:15.803+0800][14.185s][gc,mmu      ] GC(6) MMU: 2ms/98.4%, 5ms/99.1%, 10ms/99.5%, 20ms/99.7%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:15.803+0800][14.185s][gc,marking  ] GC(6) Mark: 2 stripe(s), 2 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:15.803+0800][14.185s][gc,marking  ] GC(6) Mark Stack Usage: 32M
+[2024-07-21T19:51:15.803+0800][14.185s][gc,nmethod  ] GC(6) NMethods: 457 registered, 0 unregistered
+[2024-07-21T19:51:15.803+0800][14.185s][gc,metaspace] GC(6) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:15.803+0800][14.185s][gc,ref      ] GC(6) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:15.803+0800][14.185s][gc,ref      ] GC(6) Weak: 131 encountered, 107 discovered, 0 enqueued
+[2024-07-21T19:51:15.803+0800][14.185s][gc,ref      ] GC(6) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:15.803+0800][14.185s][gc,ref      ] GC(6) Phantom: 184 encountered, 151 discovered, 0 enqueued
+[2024-07-21T19:51:15.803+0800][14.185s][gc,reloc    ] GC(6) Small Pages: 4 / 8M, Empty: 0M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:15.803+0800][14.185s][gc,reloc    ] GC(6) Medium Pages: 55 / 1760M, Empty: 1664M, Relocated: 13M, In-Place: 0
+[2024-07-21T19:51:15.803+0800][14.185s][gc,reloc    ] GC(6) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:15.803+0800][14.185s][gc,reloc    ] GC(6) Forwarding Usage: 0M
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6) Min Capacity: 8M(0%)
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6)  Capacity:     1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)    
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6)      Free:      280M (14%)         246M (12%)        1910M (93%)        1976M (96%)        1976M (96%)         246M (12%)    
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6)      Used:     1768M (86%)        1802M (88%)         138M (7%)           72M (4%)         1802M (88%)          72M (4%)     
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6)      Live:         -                17M (1%)           17M (1%)           17M (1%)             -                  -          
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6) Allocated:         -                34M (2%)           34M (2%)           33M (2%)             -                  -          
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6)   Garbage:         -              1750M (85%)          86M (4%)           20M (1%)             -                  -          
+[2024-07-21T19:51:15.803+0800][14.185s][gc,heap     ] GC(6) Reclaimed:         -                  -              1664M (81%)        1729M (84%)            -                  -          
+[2024-07-21T19:51:15.803+0800][14.185s][gc          ] GC(6) Garbage Collection (Proactive) 1768M(86%)->72M(4%)
+[2024-07-21T19:51:17.989+0800][16.371s][gc,start    ] GC(7) Garbage Collection (Proactive)
+[2024-07-21T19:51:17.989+0800][16.371s][gc,task     ] GC(7) Using 2 workers
+[2024-07-21T19:51:17.989+0800][16.371s][gc,phases   ] GC(7) Pause Mark Start 0.008ms
+[2024-07-21T19:51:18.005+0800][16.387s][gc,phases   ] GC(7) Concurrent Mark 15.595ms
+[2024-07-21T19:51:18.005+0800][16.387s][gc,phases   ] GC(7) Pause Mark End 0.014ms
+[2024-07-21T19:51:18.005+0800][16.387s][gc,phases   ] GC(7) Concurrent Mark Free 0.001ms
+[2024-07-21T19:51:18.006+0800][16.388s][gc,phases   ] GC(7) Concurrent Process Non-Strong References 0.755ms
+[2024-07-21T19:51:18.006+0800][16.388s][gc,phases   ] GC(7) Concurrent Reset Relocation Set 0.001ms
+[2024-07-21T19:51:18.008+0800][16.390s][gc,phases   ] GC(7) Concurrent Select Relocation Set 2.147ms
+[2024-07-21T19:51:18.009+0800][16.390s][gc,phases   ] GC(7) Pause Relocate Start 0.014ms
+[2024-07-21T19:51:18.013+0800][16.395s][gc,phases   ] GC(7) Concurrent Relocate 4.016ms
+[2024-07-21T19:51:18.013+0800][16.395s][gc,load     ] GC(7) Load: 0.00/0.00/0.00
+[2024-07-21T19:51:18.013+0800][16.395s][gc,mmu      ] GC(7) MMU: 2ms/98.4%, 5ms/99.1%, 10ms/99.5%, 20ms/99.7%, 50ms/99.9%, 100ms/99.9%
+[2024-07-21T19:51:18.013+0800][16.395s][gc,marking  ] GC(7) Mark: 2 stripe(s), 2 proactive flush(es), 1 terminate flush(es), 0 completion(s), 0 continuation(s) 
+[2024-07-21T19:51:18.013+0800][16.395s][gc,marking  ] GC(7) Mark Stack Usage: 32M
+[2024-07-21T19:51:18.013+0800][16.395s][gc,nmethod  ] GC(7) NMethods: 464 registered, 0 unregistered
+[2024-07-21T19:51:18.013+0800][16.395s][gc,metaspace] GC(7) Metaspace: 1M used, 1M committed, 1032M reserved
+[2024-07-21T19:51:18.013+0800][16.395s][gc,ref      ] GC(7) Soft: 93 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:18.013+0800][16.395s][gc,ref      ] GC(7) Weak: 131 encountered, 5 discovered, 0 enqueued
+[2024-07-21T19:51:18.013+0800][16.395s][gc,ref      ] GC(7) Final: 0 encountered, 0 discovered, 0 enqueued
+[2024-07-21T19:51:18.013+0800][16.395s][gc,ref      ] GC(7) Phantom: 184 encountered, 147 discovered, 0 enqueued
+[2024-07-21T19:51:18.013+0800][16.395s][gc,reloc    ] GC(7) Small Pages: 5 / 10M, Empty: 0M, Relocated: 1M, In-Place: 0
+[2024-07-21T19:51:18.013+0800][16.395s][gc,reloc    ] GC(7) Medium Pages: 47 / 1504M, Empty: 1408M, Relocated: 12M, In-Place: 0
+[2024-07-21T19:51:18.013+0800][16.395s][gc,reloc    ] GC(7) Large Pages: 0 / 0M, Empty: 0M, Relocated: 0M, In-Place: 0
+[2024-07-21T19:51:18.013+0800][16.395s][gc,reloc    ] GC(7) Forwarding Usage: 0M
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7) Min Capacity: 8M(0%)
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7) Max Capacity: 2048M(100%)
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7) Soft Max Capacity: 2048M(100%)
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7)                Mark Start          Mark End        Relocate Start      Relocate End           High               Low         
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7)  Capacity:     1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)        1856M (91%)    
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7)      Free:      534M (26%)         500M (24%)        1908M (93%)        1976M (96%)        1976M (96%)         500M (24%)    
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7)      Used:     1514M (74%)        1548M (76%)         140M (7%)           72M (4%)         1548M (76%)          72M (4%)     
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7)      Live:         -                16M (1%)           16M (1%)           16M (1%)             -                  -          
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7) Allocated:         -                34M (2%)           34M (2%)           33M (2%)             -                  -          
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7)   Garbage:         -              1497M (73%)          89M (4%)           21M (1%)             -                  -          
+[2024-07-21T19:51:18.013+0800][16.395s][gc,heap     ] GC(7) Reclaimed:         -                  -              1408M (69%)        1475M (72%)            -                  -          
+[2024-07-21T19:51:18.013+0800][16.395s][gc          ] GC(7) Garbage Collection (Proactive) 1514M(74%)->72M(4%)
+[2024-07-21T19:51:19.613+0800][17.995s][gc,heap,exit] Heap
+[2024-07-21T19:51:19.613+0800][17.995s][gc,heap,exit]  ZHeap           used 1128M, capacity 1856M, max capacity 2048M
+[2024-07-21T19:51:19.613+0800][17.995s][gc,heap,exit]  Metaspace       used 1345K, committed 1472K, reserved 1056768K
+[2024-07-21T19:51:19.613+0800][17.995s][gc,heap,exit]   class space    used 111K, committed 192K, reserved 1048576K
