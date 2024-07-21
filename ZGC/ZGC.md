@@ -446,7 +446,7 @@ public class Zgc {
 ![img_3.png](img_3.png)
 得出结论：SoftMaxHeapSize的设置让该程序的性能有逐渐提升，设置为最大堆空间时，程序有最高性能。<br>
 
-## 3、修改程序的InitiatingHeapOccupancyPercent
+## 3、修改程序的InitiatingHeapOccupancyPercent(并不算成功)
 参数为(在Xmx2g下)
 ```
 -XX:+UseZGC
@@ -486,20 +486,52 @@ public class Zgc {
 - [InitiatingHeapOccupancyPercent=70](InitiatingHeapOccupancyPercent/1InitiatingHeapOccupancyPercent70.log)
 - [InitiatingHeapOccupancyPercent=75](InitiatingHeapOccupancyPercent/1InitiatingHeapOccupancyPercent75.log)
 - [InitiatingHeapOccupancyPercent=80](InitiatingHeapOccupancyPercent/1InitiatingHeapOccupancyPercent80.log)
-- [InitiatingHeapOccupancyPercent=80](InitiatingHeapOccupancyPercent/1InitiatingHeapOccupancyPercent90.log)
+- [InitiatingHeapOccupancyPercent=90](InitiatingHeapOccupancyPercent/1InitiatingHeapOccupancyPercent90.log)
 - [InitiatingHeapOccupancyPercent=100](InitiatingHeapOccupancyPercent/2InitiatingHeapOccupancyPercent100.log)
 
 </details>
 
-
 ![img_5.png](img_5.png)
 得到的结果依然不明显
 
+考虑在堆内存为128m的情况下进行调优（Zgc在内存足够的情况下，性能本来就很高）
 
+参数为(在Xmx128m下)
+```
+-XX:+UseZGC
+-Xmx128m
+-Xlog:gc*:file=./gc.log:time,uptime，tags
+```
+堆内存使用达到指定百分比时开始垃圾收集的阈值
+```
+-XX:InitiatingHeapOccupancyPercent=25	
+-XX:InitiatingHeapOccupancyPercent=50	
+-XX:InitiatingHeapOccupancyPercent=75	
+-XX:InitiatingHeapOccupancyPercent=100	
+```
+<details>
+    <summary>对应的日志</summary>
 
+- [InitiatingHeapOccupancyPercent=25](InitiatingHeapOccupancyPercent/3InitiatingHeapOccupancyPercent25.log)
+- [InitiatingHeapOccupancyPercent=50](InitiatingHeapOccupancyPercent/3InitiatingHeapOccupancyPercent50.log)
+- [InitiatingHeapOccupancyPercent=75](InitiatingHeapOccupancyPercent/3InitiatingHeapOccupancyPercent75.log)
+- [InitiatingHeapOccupancyPercent=100](InitiatingHeapOccupancyPercent/4InitiatingHeapOccupancyPercent100.log)
 
+</details>
 
+结果依然不够明显
+![img_6.png](img_6.png)
 
+其中不论在那种Xmx下都是25%和75%总暂停时间最短，所以设计一共更小的粒度进行，每百分之一进行一次日志记录
+脚本如下 //todo
+
+```shell
+java
+-XX:+UseZGC
+-Xmx2g
+-Xlog:gc*:file=./gc.log:time,uptime,tags
+ZgcOptimization
+```
 
 
 
