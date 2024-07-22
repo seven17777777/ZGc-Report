@@ -1,3 +1,9 @@
+
+
+[TOC]
+
+
+
 # 1、java程序(使用TencentKona-17.0.11.b1_jdk)
 
 ```java
@@ -339,7 +345,7 @@ public class IdleGCTest {
 | GC(10) Garbage Collection (Allocation Stall)<br> |  分配停滞垃圾回收  |  当内存分配出现停滞（例如没有足够的空闲内存页面）时触发，以确保内存分配能够继续进行  |
 |GC(46) Garbage Collection (System.gc())|手动垃圾回收|由调用 System.gc() 方法触发，通常用于手动请求垃圾回收|
 |GC(47) Garbage Collection (Timer)|定时垃圾回收|由定时器触发的垃圾回收，用于定期清理内存|
-	
+
 
 
 # 5、调优 
@@ -526,11 +532,14 @@ public class Zgc {
 脚本如下 //todo
 
 ```shell
-java
--XX:+UseZGC
--Xmx2g
--Xlog:gc*:file=./gc.log:time,uptime,tags
-ZgcOptimization
+@echo off
+setlocal enabledelayedexpansion
+
+for /L %%i in (1,1,10) do (
+    set "logfile=gc_%%i.log"
+    java -XX:+UseZGC -Xmx128m -XX:InitiatingHeapOccupancyPercent=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags GC/ZGC/ZgcOptimization
+)
+
 ```
 
 
