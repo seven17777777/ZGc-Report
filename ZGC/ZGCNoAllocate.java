@@ -11,7 +11,7 @@ public class ZGCNoAllocate {
 
         int k = 1;
         long startTime = System.currentTimeMillis();
-        long runDuration = 20000; // 运行时间为20秒
+        long runDuration = 25000; // 运行时间为20秒
 
         while (System.currentTimeMillis() - startTime < runDuration) {
             for (int i = 0; i < 1000; i++) {

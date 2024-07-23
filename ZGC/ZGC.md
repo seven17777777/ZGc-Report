@@ -528,80 +528,37 @@ public class Zgc {
 结果依然不够明显
 ![img_6.png](img_6.png)
 
-其中不论在那种Xmx下都是25%和75%总暂停时间最短，所以设计一共更小的粒度进行，每百分之一进行一次日志记录
-脚本如下 //todo
-
-```shell
-@echo off
-setlocal enabledelayedexpansion
-
-for /L %%i in (1,1,10) do (
-    set "logfile=gc_%%i.log"
-    java -XX:+UseZGC -Xmx128m -XX:InitiatingHeapOccupancyPercent=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags GC/ZGC/ZgcOptimization
-)
-
+## 4、修改程序的初始堆大小
+参数为
+```
+-XX:+UseZGC
+-Xmx2g
+-Xlog:gc*:file=./gc.log:time,uptime,tags
+```
+增加调整参数
+```
+-Xms128m
+-Xms256m
+-Xms512m
+-Xms1g
+-Xms2g
 ```
 
+<details>
+    <summary>对应的日志</summary>
+
+- [Xms128m](Xms/1Xms128m.log)
+- [Xms256m](Xms/2Xms256m.log)
+- [Xms512m](Xms/3Xms512m.log)
+- [Xms1g](Xms/4Xms1g.log)
+- [Xms2g](Xms/5Xms2g.log)
+</details>
+
+从下图中可以看出，当初始堆大小不断增加的时候，文件运行总时间在不断下降。但是其他的指标并没有太大规律。
+![img_7.png](img_7.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 2、修改程序的ConcGCThreads
+## 5、修改程序的ConcGCThreads
 参数为
 ```
 -XX:+UseZGC
