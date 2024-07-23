@@ -2,6 +2,7 @@
 脚本如下 //todo
 
 ```shell
+
 @echo off
 setlocal enabledelayedexpansion
 
@@ -9,5 +10,7 @@ for /L %%i in (1,1,10) do (
     set "logfile=gc_%%i.log"
     java -XX:+UseZGC -Xmx128m -XX:InitiatingHeapOccupancyPercent=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags GC/ZGC/ZgcOptimization
 )
+
+endlocal
 
 ```

@@ -527,6 +527,22 @@ public class Zgc {
 
 结果依然不够明显
 ![img_6.png](img_6.png)
+其中不论在那种Xmx下都是25%和75%总暂停时间最短，所以设计一共更小的粒度进行，每百分之一进行一次日志记录
+脚本如下 //todo
+
+```shell
+
+@echo off
+setlocal enabledelayedexpansion
+
+for /L %%i in (1,1,10) do (
+    set "logfile=gc_%%i.log"
+    java -XX:+UseZGC -Xmx128m -XX:InitiatingHeapOccupancyPercent=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags GC/ZGC/ZgcOptimization
+)
+
+endlocal
+
+```
 
 ## 4、修改程序的初始堆大小
 参数为
@@ -562,15 +578,37 @@ public class Zgc {
 参数为
 ```
 -XX:+UseZGC
--Xms2g
--Xmx4g
--Xlog:gc*:file=./gc.log:time,uptime
+-Xms1g
+-Xmx2g
+-Xlog:gc*:file=./gc.log:time,uptime,tags
 ```
-增加调整参数
+增加调整脚本参数
+解释：针对-XX:ConcGCThreads 参数，运行-XX:ConcGCThreads=1到-XX:ConcGCThreads=8
+``` shell
+@echo off
+setlocal enabledelayedexpansion
+
+for /L %%i in (1,1,8) do (
+    set "logfile=./gcLog/%%iConcGCThreads=%%i.log"
+    java -XX:+UseZGC -Xms1g  -Xmx2g -XX:ConcGCThreads=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags com.code.tryOne.jvmGc.ZGc.ZgcOptimization
+)
+
+endlocal
+
 ```
--XX:ConcGCThreads=1
--XX:ConcGCThreads=2
--XX:ConcGCThreads=3
--XX:ConcGCThreads=4
-```
-从图中可以看出，当并发线程不断增加的时候，吞吐量也会变大
+<details>
+    <summary>对应的日志</summary>
+
+- [ConcGCThreads1](ConcGCThreads/1ConcGCThreads=1.log)
+- [ConcGCThreads2](ConcGCThreads/2ConcGCThreads=2.log)
+- [ConcGCThreads3](ConcGCThreads/3ConcGCThreads=3.log)
+- [ConcGCThreads4](ConcGCThreads/4ConcGCThreads=4.log)
+- [ConcGCThreads5](ConcGCThreads/5ConcGCThreads=5.log)
+- [ConcGCThreads6](ConcGCThreads/6ConcGCThreads=6.log)
+- [ConcGCThreads7](ConcGCThreads/7ConcGCThreads=7.log)
+- [ConcGCThreads8](ConcGCThreads/8ConcGCThreads=8.log)
+</details>
+从图中可以看出，最大暂停时间和总暂停时间最小的是ConcGCThreads=4或者5，其他数量相差不大，不做比较
+
+![img_14.png](img_14.png)
+
