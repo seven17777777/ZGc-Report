@@ -662,7 +662,7 @@ endlocal
 <details>
     <summary>对应的日志</summary>
 
-- [ZCollectionInterval1](ZCollectionInterval/1ZCollectionInterval=1.log)
+- [ZProactive](ZCollectionInterval/1ZCollectionInterval=1.log)
 - [ZCollectionInterval2](ZCollectionInterval/2ZCollectionInterval=2.log)
 - [ZCollectionInterval3](ZCollectionInterval/3ZCollectionInterval=3.log)
 - [ZCollectionInterval4](ZCollectionInterval/4ZCollectionInterval=4.log)
@@ -674,6 +674,33 @@ endlocal
 </details>
 
 
+![img_19.png](img_19.png)
+![img_20.png](img_20.png)
+![img_21.png](img_21.png)
+根据多次结果看，得到的数据似乎是均匀分布的，并没用对程序有合理的调优。
+分析原因：设置垃圾回收的时间间隔只是在长期运行的程序中可以提取进行垃圾回收，降低回收的负债，从而降低最大暂停，但可能增大平均暂停时间和总暂停时间。
+
+## 7、解锁诊断 JVM 选项，并禁用 ZGC 的主动模式
+程序参数为
+```
+-XX:+UseZGC
+-Xms2g
+-Xmx2g
+-Xlog:gc*:file=./gc.log:time,uptime,tags
+```
+调优参数为
+```log
+-XX:+UnlockDiagnosticVMOptions
+-XX:-ZProactive
+```
+<details>
+    <summary>对应的日志</summary>
+
+- [gc](ZProactive/gc.log)
+- [Unlockgc](ZProactive/Unlockgc.log)
+
+</details>
 
 
-![img_19.png](img_19.png)![img_15.png](img_15.png)
+![img_22.png](img_22.png)
+多次值进行比较，得出结论，加参数后GC次数近乎原来的一半，总暂停时间也接近原来的一半，效果相对较好
