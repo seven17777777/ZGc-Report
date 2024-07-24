@@ -637,7 +637,45 @@ endlocal
 得出结论，在128m的堆下，使用2个回收线程能得到最大优化
 **由此可以推出根据不同的程序，应该做出不同的优化，需要根据实际情况决定**
 
-## 6、修改程序的ZCollectionInterval 
+## 6、修改程序的ParallelGCThreads
+参数为
+```
+-XX:+UseZGC
+-Xms1g
+-Xmx2g
+-Xlog:gc*:file=./gc.log:time,uptime,tags
+```
+增加调整脚本参数
+解释：针对-XX:ParallelGCThreads 参数，运行-XX:ParallelGCThreads=1到-XX:ParallelGCThreads=8
+``` shell
+@echo off
+setlocal enabledelayedexpansion
+
+for /L %%i in (1,1,8) do (
+    set "logfile=./gcLog/%%iParallelGCThreads=%%i.log"
+    java -XX:+UseZGC  -Xmx128m -XX:ParallelGCThreads=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags com.code.tryOne.jvmGc.ZGc.ZgcOptimization
+)
+
+endlocal
+
+```
+<details>
+    <summary>对应的日志</summary>
+
+- [ParallelGCThreads1](ParallelGCThreads/1ParallelGCThreads=1.log)
+- [ParallelGCThreads2](ParallelGCThreads/2ParallelGCThreads=2.log)
+- [ParallelGCThreads3](ParallelGCThreads/3ParallelGCThreads=3.log)
+- [ParallelGCThreads4](ParallelGCThreads/4ParallelGCThreads=4.log)
+- [ParallelGCThreads5](ParallelGCThreads/5ParallelGCThreads=5.log)
+- [ParallelGCThreads6](ParallelGCThreads/6ParallelGCThreads=6.log)
+- [ParallelGCThreads7](ParallelGCThreads/7ParallelGCThreads=7.log)
+- [ParallelGCThreads8](ParallelGCThreads/8ParallelGCThreads=8.log)
+</details>
+
+![img_23.png](img_23.png)
+从图中可以看出，不同参数对GC影响并不大应该是这个参数并没有触发程序痛点。
+
+## 7、修改程序的ZCollectionInterval 
 设置垃圾回收的时间间隔（以秒为单位）
 程序参数为
 ```
@@ -680,7 +718,7 @@ endlocal
 根据多次结果看，得到的数据似乎是均匀分布的，并没用对程序有合理的调优。
 分析原因：设置垃圾回收的时间间隔只是在长期运行的程序中可以提取进行垃圾回收，降低回收的负债，从而降低最大暂停，但可能增大平均暂停时间和总暂停时间。
 
-## 7、解锁诊断 JVM 选项，并禁用 ZGC 的主动模式
+## 8、解锁诊断 JVM 选项，并禁用 ZGC 的主动模式
 程序参数为
 ```
 -XX:+UseZGC
@@ -704,3 +742,5 @@ endlocal
 
 ![img_22.png](img_22.png)
 多次值进行比较，得出结论，加参数后GC次数近乎原来的一半，总暂停时间也接近原来的一半，效果相对较好
+**解释** 默认情况下，ZGC启用主动垃圾收集，以便在内存使用达到一定阈值之前，主动进行垃圾回收，从而平滑内存使用和减少垃圾回收暂停时间。通过 -XX:-ZProactive 可以禁用这种行为。
+这是因为我们准备调优的例子体量并大，如果体量大的程序，这个调优应该是没用的。
