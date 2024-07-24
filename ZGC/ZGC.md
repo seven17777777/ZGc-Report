@@ -612,26 +612,68 @@ endlocal
 
 ![img_14.png](img_14.png)
 
-## 6、修改程序的ConcGCThreads
-参数为
+考虑在最大堆为128M的情况下进行实验(未记录对应日志)
+<details>
+    <summary>记录对应脚本</summary>
+
+```shell
+@echo off
+setlocal enabledelayedexpansion
+
+for /L %%i in (1,1,8) do (
+set "logfile=./gcLog/%%iConcGCThreads=%%i.log"
+java -XX:+UseZGC  -Xmx128m -XX:ConcGCThreads=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags com.code.tryOne.jvmGc.ZGc.ZgcOptimization
+)
+
+endlocal
+```
+
+</details>
+
+
+![img_16.png](img_16.png)
+![img_17.png](img_17.png)
+![img_18.png](img_18.png)
+得出结论，在128m的堆下，使用2个回收线程能得到最大优化
+**由此可以推出根据不同的程序，应该做出不同的优化，需要根据实际情况决定**
+
+## 6、修改程序的ZCollectionInterval 
+设置垃圾回收的时间间隔（以秒为单位）
+程序参数为
 ```
 -XX:+UseZGC
--Xms1g
+-Xms2g
 -Xmx2g
 -Xlog:gc*:file=./gc.log:time,uptime,tags
 ```
 
 增加调整参数(使用脚本过程省略)
 ```
--XX:ZCollectionInterval=10
--XX:ZCollectionInterval=20
--XX:ZCollectionInterval=30
--XX:ZCollectionInterval=40
--XX:ZCollectionInterval=50
--XX:ZCollectionInterval=60
--XX:ZCollectionInterval=70
--XX:ZCollectionInterval=80
--XX:ZCollectionInterval=90
+-XX:ZCollectionInterval=1
+-XX:ZCollectionInterval=2
+-XX:ZCollectionInterval=3
+-XX:ZCollectionInterval=4
+-XX:ZCollectionInterval=5
+-XX:ZCollectionInterval=6
+-XX:ZCollectionInterval=7
+-XX:ZCollectionInterval=8
+-XX:ZCollectionInterval=9
 ```
-分析结果，结果并不明显，应该是没有触发到
-![img_15.png](img_15.png)
+<details>
+    <summary>对应的日志</summary>
+
+- [ZCollectionInterval1](ZCollectionInterval/1ZCollectionInterval=1.log)
+- [ZCollectionInterval2](ZCollectionInterval/2ZCollectionInterval=2.log)
+- [ZCollectionInterval3](ZCollectionInterval/3ZCollectionInterval=3.log)
+- [ZCollectionInterval4](ZCollectionInterval/4ZCollectionInterval=4.log)
+- [ZCollectionInterval5](ZCollectionInterval/5ZCollectionInterval=5.log)
+- [ZCollectionInterval6](ZCollectionInterval/6ZCollectionInterval=6.log)
+- [ZCollectionInterval7](ZCollectionInterval/7ZCollectionInterval=7.log)
+- [ZCollectionInterval8](ZCollectionInterval/8ZCollectionInterval=8.log)
+- [ZCollectionInterval9](ZCollectionInterval/9ZCollectionInterval=9.log)
+</details>
+
+
+
+
+![img_19.png](img_19.png)![img_15.png](img_15.png)
