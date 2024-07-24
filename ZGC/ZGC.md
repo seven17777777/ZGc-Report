@@ -612,3 +612,26 @@ endlocal
 
 ![img_14.png](img_14.png)
 
+## 6、修改程序的ConcGCThreads
+参数为
+```
+-XX:+UseZGC
+-Xms1g
+-Xmx2g
+-Xlog:gc*:file=./gc.log:time,uptime,tags
+```
+
+增加调整参数(使用脚本过程省略)
+```
+-XX:ZCollectionInterval=10
+-XX:ZCollectionInterval=20
+-XX:ZCollectionInterval=30
+-XX:ZCollectionInterval=40
+-XX:ZCollectionInterval=50
+-XX:ZCollectionInterval=60
+-XX:ZCollectionInterval=70
+-XX:ZCollectionInterval=80
+-XX:ZCollectionInterval=90
+```
+分析结果，结果并不明显，应该是没有触发到
+![img_15.png](img_15.png)
