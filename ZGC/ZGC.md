@@ -533,22 +533,9 @@ public class Zgc {
 
 结果依然不够明显
 ![img_6.png](img_6.png)
-其中不论在那种Xmx下都是25%和75%总暂停时间最短，所以设计一共更小的粒度进行，每百分之一进行一次日志记录
-脚本如下 //todo
+其中不论在那种Xmx下都是25%和75%总暂停时间最短
 
-```shell
 
-@echo off
-setlocal enabledelayedexpansion
-
-for /L %%i in (1,1,10) do (
-    set "logfile=gc_%%i.log"
-    java -XX:+UseZGC -Xmx128m -XX:InitiatingHeapOccupancyPercent=%%i -Xlog:gc*:file=./!logfile!:time,uptime,tags GC/ZGC/ZgcOptimization
-)
-
-endlocal
-
-```
 
 ## 4、修改程序的初始堆大小
 参数为
